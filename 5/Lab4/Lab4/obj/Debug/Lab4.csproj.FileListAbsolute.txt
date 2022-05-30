@@ -1,0 +1,11 @@
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.csproj.AssemblyReference.cache
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.csproj.SuggestedBindingRedirects.cache
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.Form1.resources
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.Properties.Resources.resources
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.csproj.GenerateResource.cache
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.csproj.CoreCompileInputs.cache
+D:\Візуальне програмування\Labs\Lab4\Lab4\bin\Debug\Lab4.exe.config
+D:\Візуальне програмування\Labs\Lab4\Lab4\bin\Debug\Lab4.exe
+D:\Візуальне програмування\Labs\Lab4\Lab4\bin\Debug\Lab4.pdb
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.exe
+D:\Візуальне програмування\Labs\Lab4\Lab4\obj\Debug\Lab4.pdb
