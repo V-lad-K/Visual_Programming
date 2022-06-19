@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d49ba888b56c43119fa7c9fde89548f4" Name="Diagram1">
+        <EntityTypeShape EntityType="Last_Course_WorkModel.відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Last_Course_WorkModel.додаткова_інформація_про_товар" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Last_Course_WorkModel.замовлення_особи_товару" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Last_Course_WorkModel.система_повинна_зберігати_інформацію_про_юзера" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Last_Course_WorkModel.Товар" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="Last_Course_WorkModel.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера" ManuallyRouted="false" />
+        <AssociationConnector Association="Last_Course_WorkModel.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1" ManuallyRouted="false" />
+        <AssociationConnector Association="Last_Course_WorkModel.FK_додаткова_інформація_про_товар_Товар" ManuallyRouted="false" />
+        <AssociationConnector Association="Last_Course_WorkModel.FK_замовлення_особи_товару_додаткова_інформація_про_товар" ManuallyRouted="false" />
+        <AssociationConnector Association="Last_Course_WorkModel.FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

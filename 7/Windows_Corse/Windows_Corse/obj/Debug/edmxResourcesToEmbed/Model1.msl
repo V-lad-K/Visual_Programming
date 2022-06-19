@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Last_Course_WorkModelContainer" CdmEntityContainer="Last_Course_WorkEntities">
+    <EntitySetMapping Name="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику">
+      <EntityTypeMapping TypeName="Last_Course_WorkModel.відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику">
+        <MappingFragment StoreEntitySet="відслідкування оплати товару покупцям або виплата товару посчальнику">
+          <ScalarProperty Name="info_user_id" ColumnName="info_user_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="дата" ColumnName="дата" />
+          <ScalarProperty Name="сума" ColumnName="сума" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UCR" ColumnName="UCR" />
+          <ScalarProperty Name="DCR" ColumnName="DCR" />
+          <ScalarProperty Name="ULC" ColumnName="ULC" />
+          <ScalarProperty Name="DLC" ColumnName="DLC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="додаткова_інформація_про_товар">
+      <EntityTypeMapping TypeName="Last_Course_WorkModel.додаткова_інформація_про_товар">
+        <MappingFragment StoreEntitySet="додаткова інформація про товар">
+          <ScalarProperty Name="номер_документу" ColumnName="номер документу" />
+          <ScalarProperty Name="операція" ColumnName="операція" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UCR" ColumnName="UCR" />
+          <ScalarProperty Name="DCR" ColumnName="DCR" />
+          <ScalarProperty Name="ULC" ColumnName="ULC" />
+          <ScalarProperty Name="DLC" ColumnName="DLC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="замовлення_особи_товару">
+      <EntityTypeMapping TypeName="Last_Course_WorkModel.замовлення_особи_товару">
+        <MappingFragment StoreEntitySet="замовлення особи товару">
+          <ScalarProperty Name="new_info_product_id" ColumnName="new_info_product_id" />
+          <ScalarProperty Name="info_user_id" ColumnName="info_user_id" />
+          <ScalarProperty Name="кількість_товару" ColumnName="кількість товару" />
+          <ScalarProperty Name="дата" ColumnName="дата" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UCR" ColumnName="UCR" />
+          <ScalarProperty Name="DCR" ColumnName="DCR" />
+          <ScalarProperty Name="ULC" ColumnName="ULC" />
+          <ScalarProperty Name="DLC" ColumnName="DLC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="система_повинна_зберігати_інформацію_про_юзера">
+      <EntityTypeMapping TypeName="Last_Course_WorkModel.система_повинна_зберігати_інформацію_про_юзера">
+        <MappingFragment StoreEntitySet="система повинна зберігати інформацію про юзера">
+          <ScalarProperty Name="ім_я" ColumnName="ім'я" />
+          <ScalarProperty Name="код" ColumnName="код" />
+          <ScalarProperty Name="адреса" ColumnName="адреса" />
+          <ScalarProperty Name="категорія_особи" ColumnName="категорія особи" />
+          <ScalarProperty Name="знижка" ColumnName="знижка" />
+          <ScalarProperty Name="борг" ColumnName="борг" />
+          <ScalarProperty Name="рахунок_за_місяць" ColumnName="рахунок за місяць" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UCR" ColumnName="UCR" />
+          <ScalarProperty Name="DCR" ColumnName="DCR" />
+          <ScalarProperty Name="ULC" ColumnName="ULC" />
+          <ScalarProperty Name="DLC" ColumnName="DLC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Товар">
+      <EntityTypeMapping TypeName="Last_Course_WorkModel.Товар">
+        <MappingFragment StoreEntitySet="Товар">
+          <ScalarProperty Name="код" ColumnName="код" />
+          <ScalarProperty Name="категорія_продукту" ColumnName="категорія продукту" />
+          <ScalarProperty Name="ім_я" ColumnName="ім'я" />
+          <ScalarProperty Name="одиниця" ColumnName="одиниця" />
+          <ScalarProperty Name="термін_придатності" ColumnName="термін придатності" />
+          <ScalarProperty Name="ціна_закупки" ColumnName="ціна закупки" />
+          <ScalarProperty Name="ціна_продажу" ColumnName="ціна продажу" />
+          <ScalarProperty Name="на_складі" ColumnName="на складі" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="UCR" ColumnName="UCR" />
+          <ScalarProperty Name="DCR" ColumnName="DCR" />
+          <ScalarProperty Name="ULC" ColumnName="ULC" />
+          <ScalarProperty Name="DLC" ColumnName="DLC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

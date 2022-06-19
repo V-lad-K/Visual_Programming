@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Last_Course_WorkDataSet" targetNamespace="http://tempuri.org/Last_Course_WorkDataSet.xsd" xmlns:mstns="http://tempuri.org/Last_Course_WorkDataSet.xsd" xmlns="http://tempuri.org/Last_Course_WorkDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Last_Course_WorkConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Last_Course_WorkConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Windows_Corse.Properties.Settings.GlobalReference.Default.Last_Course_WorkConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ТоварTableAdapter" GeneratorDataComponentClassName="ТоварTableAdapter" Name="Товар" UserDataComponentName="ТоварTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Last_Course_WorkConnectionString (Settings)" DbObjectName="Last_Course_Work.dbo.Товар" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [категорія продукту] FROM dbo.Товар</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="категорія продукту" DataSetColumn="категорія продукту" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="Last_Course_WorkConnectionString (Settings)" DbObjectName="Last_Course_Work.dbo.Товар" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT DISTINCT [категорія продукту] FROM dbo.Товар</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Last_Course_WorkDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Last_Course_WorkDataSet" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Last_Course_WorkDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Товар" msprop:Generator_RowClassName="ТоварRow" msprop:Generator_RowEvHandlerName="ТоварRowChangeEventHandler" msprop:Generator_RowDeletedName="ТоварRowDeleted" msprop:Generator_RowDeletingName="ТоварRowDeleting" msprop:Generator_RowEvArgName="ТоварRowChangeEvent" msprop:Generator_TablePropName="Товар" msprop:Generator_RowChangedName="ТоварRowChanged" msprop:Generator_UserTableName="Товар" msprop:Generator_RowChangingName="ТоварRowChanging" msprop:Generator_TableClassName="ТоварDataTable" msprop:Generator_TableVarName="tableТовар">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="категорія_x0020_продукту" msprop:Generator_UserColumnName="категорія продукту" msprop:Generator_ColumnPropNameInTable="категорія_продуктуColumn" msprop:Generator_ColumnPropNameInRow="категорія_продукту" msprop:Generator_ColumnVarNameInTable="columnкатегорія_продукту" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

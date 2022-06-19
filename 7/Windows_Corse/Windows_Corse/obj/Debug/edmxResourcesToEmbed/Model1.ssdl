@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Last_Course_WorkModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="відслідкування оплати товару покупцям або виплата товару посчальнику">
+    <Key>
+      <PropertyRef Name="info_user_id" />
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="info_user_id" Type="int" Nullable="false" />
+    <Property Name="product_id" Type="int" Nullable="false" />
+    <Property Name="дата" Type="date" />
+    <Property Name="сума" Type="float" />
+    <Property Name="id" Type="int" />
+    <Property Name="UCR" Type="varchar" MaxLength="50" />
+    <Property Name="DCR" Type="datetime" />
+    <Property Name="ULC" Type="varchar" MaxLength="50" />
+    <Property Name="DLC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="додаткова інформація про товар">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="номер документу" Type="int" />
+    <Property Name="операція" Type="nvarchar" MaxLength="50" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="UCR" Type="varchar" MaxLength="50" />
+    <Property Name="DCR" Type="datetime" />
+    <Property Name="ULC" Type="varchar" MaxLength="50" />
+    <Property Name="DLC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="замовлення особи товару">
+    <Key>
+      <PropertyRef Name="new_info_product_id" />
+      <PropertyRef Name="info_user_id" />
+    </Key>
+    <Property Name="new_info_product_id" Type="int" Nullable="false" />
+    <Property Name="info_user_id" Type="int" Nullable="false" />
+    <Property Name="кількість товару" Type="int" />
+    <Property Name="дата" Type="date" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="UCR" Type="varchar" MaxLength="50" />
+    <Property Name="DCR" Type="datetime" />
+    <Property Name="ULC" Type="varchar" MaxLength="50" />
+    <Property Name="DLC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="система повинна зберігати інформацію про юзера">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="ім'я" Type="nvarchar" MaxLength="50" />
+    <Property Name="код" Type="int" />
+    <Property Name="адреса" Type="nvarchar" MaxLength="50" />
+    <Property Name="категорія особи" Type="nvarchar" MaxLength="50" />
+    <Property Name="знижка" Type="float" />
+    <Property Name="борг" Type="float" />
+    <Property Name="рахунок за місяць" Type="float" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="UCR" Type="varchar" MaxLength="50" />
+    <Property Name="DCR" Type="datetime" />
+    <Property Name="ULC" Type="varchar" MaxLength="50" />
+    <Property Name="DLC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Товар">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="код" Type="nvarchar" MaxLength="50" />
+    <Property Name="категорія продукту" Type="nvarchar" MaxLength="50" />
+    <Property Name="ім'я" Type="nvarchar" MaxLength="50" />
+    <Property Name="одиниця" Type="nvarchar" MaxLength="50" />
+    <Property Name="термін придатності" Type="date" />
+    <Property Name="ціна закупки" Type="float" />
+    <Property Name="ціна продажу" Type="float" />
+    <Property Name="на складі" Type="int" />
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="UCR" Type="varchar" MaxLength="50" />
+    <Property Name="DCR" Type="datetime" />
+    <Property Name="ULC" Type="varchar" MaxLength="50" />
+    <Property Name="DLC" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_відслідкування оплати товару покупцям або виплата товару посчальнику_система повинна зберігати інформацію про юзера">
+    <End Role="система повинна зберігати інформацію про юзера" Type="Self.система повинна зберігати інформацію про юзера" Multiplicity="1" />
+    <End Role="відслідкування оплати товару покупцям або виплата товару посчальнику" Type="Self.відслідкування оплати товару покупцям або виплата товару посчальнику" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="система повинна зберігати інформацію про юзера">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="відслідкування оплати товару покупцям або виплата товару посчальнику">
+        <PropertyRef Name="info_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_відслідкування оплати товару покупцям або виплата товару посчальнику_Товар1">
+    <End Role="Товар" Type="Self.Товар" Multiplicity="1" />
+    <End Role="відслідкування оплати товару покупцям або виплата товару посчальнику" Type="Self.відслідкування оплати товару покупцям або виплата товару посчальнику" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="відслідкування оплати товару покупцям або виплата товару посчальнику">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_додаткова інформація про товар_Товар">
+    <End Role="Товар" Type="Self.Товар" Multiplicity="1" />
+    <End Role="додаткова інформація про товар" Type="Self.додаткова інформація про товар" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="додаткова інформація про товар">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_замовлення особи товару_додаткова інформація про товар">
+    <End Role="додаткова інформація про товар" Type="Self.додаткова інформація про товар" Multiplicity="1" />
+    <End Role="замовлення особи товару" Type="Self.замовлення особи товару" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="додаткова інформація про товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="замовлення особи товару">
+        <PropertyRef Name="new_info_product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_замовлення особи товару_система повинна зберігати інформацію про юзера">
+    <End Role="система повинна зберігати інформацію про юзера" Type="Self.система повинна зберігати інформацію про юзера" Multiplicity="1" />
+    <End Role="замовлення особи товару" Type="Self.замовлення особи товару" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="система повинна зберігати інформацію про юзера">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="замовлення особи товару">
+        <PropertyRef Name="info_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Last_Course_WorkModelContainer">
+    <EntitySet Name="відслідкування оплати товару покупцям або виплата товару посчальнику" EntityType="Self.відслідкування оплати товару покупцям або виплата товару посчальнику" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="додаткова інформація про товар" EntityType="Self.додаткова інформація про товар" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="замовлення особи товару" EntityType="Self.замовлення особи товару" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="система повинна зберігати інформацію про юзера" EntityType="Self.система повинна зберігати інформацію про юзера" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Товар" EntityType="Self.Товар" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_відслідкування оплати товару покупцям або виплата товару посчальнику_система повинна зберігати інформацію про юзера" Association="Self.FK_відслідкування оплати товару покупцям або виплата товару посчальнику_система повинна зберігати інформацію про юзера">
+      <End Role="система повинна зберігати інформацію про юзера" EntitySet="система повинна зберігати інформацію про юзера" />
+      <End Role="відслідкування оплати товару покупцям або виплата товару посчальнику" EntitySet="відслідкування оплати товару покупцям або виплата товару посчальнику" />
+    </AssociationSet>
+    <AssociationSet Name="FK_відслідкування оплати товару покупцям або виплата товару посчальнику_Товар1" Association="Self.FK_відслідкування оплати товару покупцям або виплата товару посчальнику_Товар1">
+      <End Role="Товар" EntitySet="Товар" />
+      <End Role="відслідкування оплати товару покупцям або виплата товару посчальнику" EntitySet="відслідкування оплати товару покупцям або виплата товару посчальнику" />
+    </AssociationSet>
+    <AssociationSet Name="FK_додаткова інформація про товар_Товар" Association="Self.FK_додаткова інформація про товар_Товар">
+      <End Role="Товар" EntitySet="Товар" />
+      <End Role="додаткова інформація про товар" EntitySet="додаткова інформація про товар" />
+    </AssociationSet>
+    <AssociationSet Name="FK_замовлення особи товару_додаткова інформація про товар" Association="Self.FK_замовлення особи товару_додаткова інформація про товар">
+      <End Role="додаткова інформація про товар" EntitySet="додаткова інформація про товар" />
+      <End Role="замовлення особи товару" EntitySet="замовлення особи товару" />
+    </AssociationSet>
+    <AssociationSet Name="FK_замовлення особи товару_система повинна зберігати інформацію про юзера" Association="Self.FK_замовлення особи товару_система повинна зберігати інформацію про юзера">
+      <End Role="система повинна зберігати інформацію про юзера" EntitySet="система повинна зберігати інформацію про юзера" />
+      <End Role="замовлення особи товару" EntitySet="замовлення особи товару" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

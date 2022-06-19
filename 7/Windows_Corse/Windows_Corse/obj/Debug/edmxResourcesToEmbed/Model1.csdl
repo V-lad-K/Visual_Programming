@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Last_Course_WorkModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику">
+    <Key>
+      <PropertyRef Name="info_user_id" />
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="info_user_id" Type="Int32" Nullable="false" />
+    <Property Name="product_id" Type="Int32" Nullable="false" />
+    <Property Name="дата" Type="DateTime" Precision="0" />
+    <Property Name="сума" Type="Double" />
+    <Property Name="id" Type="Int32" />
+    <Property Name="UCR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DCR" Type="DateTime" Precision="3" />
+    <Property Name="ULC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DLC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="система_повинна_зберігати_інформацію_про_юзера" Relationship="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера" FromRole="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" ToRole="система_повинна_зберігати_інформацію_про_юзера" />
+    <NavigationProperty Name="Товар" Relationship="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1" FromRole="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" ToRole="Товар" />
+  </EntityType>
+  <EntityType Name="додаткова_інформація_про_товар">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="номер_документу" Type="Int32" />
+    <Property Name="операція" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="UCR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DCR" Type="DateTime" Precision="3" />
+    <Property Name="ULC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DLC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Товар" Relationship="Self.FK_додаткова_інформація_про_товар_Товар" FromRole="додаткова_інформація_про_товар" ToRole="Товар" />
+    <NavigationProperty Name="замовлення_особи_товару" Relationship="Self.FK_замовлення_особи_товару_додаткова_інформація_про_товар" FromRole="додаткова_інформація_про_товар" ToRole="замовлення_особи_товару" />
+  </EntityType>
+  <EntityType Name="замовлення_особи_товару">
+    <Key>
+      <PropertyRef Name="new_info_product_id" />
+      <PropertyRef Name="info_user_id" />
+    </Key>
+    <Property Name="new_info_product_id" Type="Int32" Nullable="false" />
+    <Property Name="info_user_id" Type="Int32" Nullable="false" />
+    <Property Name="кількість_товару" Type="Int32" />
+    <Property Name="дата" Type="DateTime" Precision="0" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="UCR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DCR" Type="DateTime" Precision="3" />
+    <Property Name="ULC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DLC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="додаткова_інформація_про_товар" Relationship="Self.FK_замовлення_особи_товару_додаткова_інформація_про_товар" FromRole="замовлення_особи_товару" ToRole="додаткова_інформація_про_товар" />
+    <NavigationProperty Name="система_повинна_зберігати_інформацію_про_юзера" Relationship="Self.FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера" FromRole="замовлення_особи_товару" ToRole="система_повинна_зберігати_інформацію_про_юзера" />
+  </EntityType>
+  <EntityType Name="система_повинна_зберігати_інформацію_про_юзера">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="ім_я" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="код" Type="Int32" />
+    <Property Name="адреса" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="категорія_особи" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="знижка" Type="Double" />
+    <Property Name="борг" Type="Double" />
+    <Property Name="рахунок_за_місяць" Type="Double" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="UCR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DCR" Type="DateTime" Precision="3" />
+    <Property Name="ULC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DLC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Relationship="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера" FromRole="система_повинна_зберігати_інформацію_про_юзера" ToRole="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" />
+    <NavigationProperty Name="замовлення_особи_товару" Relationship="Self.FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера" FromRole="система_повинна_зберігати_інформацію_про_юзера" ToRole="замовлення_особи_товару" />
+  </EntityType>
+  <EntityType Name="Товар">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="код" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="категорія_продукту" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ім_я" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="одиниця" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="термін_придатності" Type="DateTime" Precision="0" />
+    <Property Name="ціна_закупки" Type="Double" />
+    <Property Name="ціна_продажу" Type="Double" />
+    <Property Name="на_складі" Type="Int32" />
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="UCR" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DCR" Type="DateTime" Precision="3" />
+    <Property Name="ULC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DLC" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Relationship="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1" FromRole="Товар" ToRole="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" />
+    <NavigationProperty Name="додаткова_інформація_про_товар" Relationship="Self.FK_додаткова_інформація_про_товар_Товар" FromRole="Товар" ToRole="додаткова_інформація_про_товар" />
+  </EntityType>
+  <Association Name="FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера">
+    <End Role="система_повинна_зберігати_інформацію_про_юзера" Type="Self.система_повинна_зберігати_інформацію_про_юзера" Multiplicity="1" />
+    <End Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Type="Self.відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="система_повинна_зберігати_інформацію_про_юзера">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику">
+        <PropertyRef Name="info_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1">
+    <End Role="Товар" Type="Self.Товар" Multiplicity="1" />
+    <End Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Type="Self.відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_додаткова_інформація_про_товар_Товар">
+    <End Role="Товар" Type="Self.Товар" Multiplicity="1" />
+    <End Role="додаткова_інформація_про_товар" Type="Self.додаткова_інформація_про_товар" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="додаткова_інформація_про_товар">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_замовлення_особи_товару_додаткова_інформація_про_товар">
+    <End Role="додаткова_інформація_про_товар" Type="Self.додаткова_інформація_про_товар" Multiplicity="1" />
+    <End Role="замовлення_особи_товару" Type="Self.замовлення_особи_товару" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="додаткова_інформація_про_товар">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="замовлення_особи_товару">
+        <PropertyRef Name="new_info_product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера">
+    <End Role="система_повинна_зберігати_інформацію_про_юзера" Type="Self.система_повинна_зберігати_інформацію_про_юзера" Multiplicity="1" />
+    <End Role="замовлення_особи_товару" Type="Self.замовлення_особи_товару" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="система_повинна_зберігати_інформацію_про_юзера">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="замовлення_особи_товару">
+        <PropertyRef Name="info_user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Last_Course_WorkEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" EntityType="Self.відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" />
+    <EntitySet Name="додаткова_інформація_про_товар" EntityType="Self.додаткова_інформація_про_товар" />
+    <EntitySet Name="замовлення_особи_товару" EntityType="Self.замовлення_особи_товару" />
+    <EntitySet Name="система_повинна_зберігати_інформацію_про_юзера" EntityType="Self.система_повинна_зберігати_інформацію_про_юзера" />
+    <EntitySet Name="Товар" EntityType="Self.Товар" />
+    <AssociationSet Name="FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера" Association="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_система_повинна_зберігати_інформацію_про_юзера">
+      <End Role="система_повинна_зберігати_інформацію_про_юзера" EntitySet="система_повинна_зберігати_інформацію_про_юзера" />
+      <End Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" EntitySet="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" />
+    </AssociationSet>
+    <AssociationSet Name="FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1" Association="Self.FK_відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику_Товар1">
+      <End Role="Товар" EntitySet="Товар" />
+      <End Role="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" EntitySet="відслідкування_оплати_товару_покупцям_або_виплата_товару_посчальнику" />
+    </AssociationSet>
+    <AssociationSet Name="FK_додаткова_інформація_про_товар_Товар" Association="Self.FK_додаткова_інформація_про_товар_Товар">
+      <End Role="Товар" EntitySet="Товар" />
+      <End Role="додаткова_інформація_про_товар" EntitySet="додаткова_інформація_про_товар" />
+    </AssociationSet>
+    <AssociationSet Name="FK_замовлення_особи_товару_додаткова_інформація_про_товар" Association="Self.FK_замовлення_особи_товару_додаткова_інформація_про_товар">
+      <End Role="додаткова_інформація_про_товар" EntitySet="додаткова_інформація_про_товар" />
+      <End Role="замовлення_особи_товару" EntitySet="замовлення_особи_товару" />
+    </AssociationSet>
+    <AssociationSet Name="FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера" Association="Self.FK_замовлення_особи_товару_система_повинна_зберігати_інформацію_про_юзера">
+      <End Role="система_повинна_зберігати_інформацію_про_юзера" EntitySet="система_повинна_зберігати_інформацію_про_юзера" />
+      <End Role="замовлення_особи_товару" EntitySet="замовлення_особи_товару" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
