@@ -1,0 +1,62 @@
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\schedule.exe.config
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\schedule.exe
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\schedule.pdb
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.dll
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.WinForms.dll
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.Wpf.dll
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.pdb
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.xml
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.WinForms.pdb
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.WinForms.xml
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.Wpf.pdb
+D:\Візуальне програмування\Labs\schedule\schedule\bin\Debug\LiveCharts.Wpf.xml
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.csproj.AssemblyReference.cache
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.csproj.SuggestedBindingRedirects.cache
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.Properties.Resources.resources
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.csproj.GenerateResource.cache
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.csproj.CoreCompileInputs.cache
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.csproj.CopyComplete
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.exe
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.pdb
+D:\Візуальне програмування\Labs\schedule\schedule\obj\Debug\schedule.Form1.resources
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\schedule.exe.config
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\schedule.exe
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\schedule.pdb
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.dll
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.pdb
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.xml
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\User\Desktop\schedule\schedule\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.csprojAssemblyReference.cache
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.Form1.resources
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.Properties.Resources.resources
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.csproj.GenerateResource.cache
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.csproj.CopyComplete
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.exe
+C:\Users\User\Desktop\schedule\schedule\obj\Debug\schedule.pdb
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\schedule.exe.config
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\schedule.exe
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\schedule.pdb
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.dll
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.WinForms.dll
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.Wpf.dll
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.pdb
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.xml
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.WinForms.pdb
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.WinForms.xml
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.Wpf.pdb
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\bin\Debug\LiveCharts.Wpf.xml
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.csproj.AssemblyReference.cache
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.csproj.SuggestedBindingRedirects.cache
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.Form1.resources
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.Properties.Resources.resources
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.csproj.GenerateResource.cache
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.csproj.CoreCompileInputs.cache
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.csproj.CopyComplete
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.exe
+D:\Візуальне програмування\Labs\Новая папка\schedule\schedule\obj\Debug\schedule.pdb
